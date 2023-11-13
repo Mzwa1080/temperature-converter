@@ -17,22 +17,29 @@
 
 
             <div class="form-outline col-6">
-                <input type="number" data-celsius="celsius" class="form-control" />
-                <label class="form-label" for="typeNumber">Celsius</label>
+                <input type="number" data-celsius="celsius" class="form-control" required />
+                <label class="form-label" for="typeNumber" >e.g 20...</label>
             </div>
+            <button type="button" data-celsius="submit" id="btnn" class="btn btn-primary mt-1"> Convert to Fahrenheit </button>
 
-            <div class="form-outline col-6">
-                <input type="number" data-fahrenheit="fahrenheit" class="form-control" />
-                <label class="form-label" for="typeNumber">Fahrenheit</label>
+
+            <div class="form-outline col-6 mt-4">
+                <input type="number" data-fahrenheit="fahrenheit" class="form-control" required />
+                <label class="form-label" for="typeNumber">e.g 90...</label>
             </div>
+            <button type="button" data-fahrenheit="submit" id="fahrenheit" class="btn btn-primary mt-1"> Convert to Celsius </button>
+            <button type="button" data-reset="reset" class="btn btn-danger mt-4"> Reset </button>
+
+
         </div>
 
-        <button type="button" data-celsius="submit" id="btnn" class="btn btn-primary mt-3"> Convert to Celsius </button>
-        <button type="button" data-fahrenheit="submit" class="btn btn-primary mt-3"> Convert to Fahrenheit </button>
 
+        <div class="row ">
+            <h2>Results :</h2>
+            <p id="resullts" > Converted temperature is : <h3 id="convertedTemperatureValue"> </h3> </p>
 
-        <h2>Results :</h2>
-        <p id="resullts" > Converted temperature is : <h3 id="convertedTemperatureValue"> </h3> </p>
+        </div>
+
     </div>
 
 
