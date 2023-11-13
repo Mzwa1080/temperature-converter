@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Converter</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
 </head>
+
 <body>
 
-    <h2>Temperature Converter</h2>
+    <div class="container">
+        <div class="row pt-5 mt-5">
+            <h2>Temperature Converter</h2>
 
-    <label for="celsius">Celsius: </label>
-    <input type="number" id="celsius" placeholder="Enter temperature in Celsius" step="0.1">
-    
-    <br>
 
-    <label for="fahrenheit">Fahrenheit: </label>
-    <input type="number" id="fahrenheit" placeholder="Enter temperature in Fahrenheit" step="0.1">
+            <div class="form-outline col-6">
+                <input type="number" data-celsius="celsius" class="form-control" />
+                <label class="form-label" for="typeNumber">Celsius</label>
+            </div>
 
-    <br>
+            <div class="form-outline col-6">
+                <input type="number" data-fahrenheit="fahrenheit" class="form-control" />
+                <label class="form-label" for="typeNumber">Fahrenheit</label>
+            </div>
+        </div>
 
-    <button onclick="convertToCelsius()">Convert to Celsius</button>
-    <button onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+        <button type="button" data-celsius="submit" id="btnn" class="btn btn-primary mt-3"> Convert to Celsius </button>
+        <button type="button" data-fahrenheit="submit" class="btn btn-primary mt-3"> Convert to Fahrenheit </button>
 
-    <br>
 
-    <h3>Result:</h3>
-    <p id="result">Converted temperature is: <span id="convertedTemperature"></span></p>
+        <h2>Results :</h2>
+        <p id="resullts" > Converted temperature is : <h3 id="convertedTemperatureValue"> </h3> </p>
+    </div>
 
+
+
+    <script src="./script/index.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
 
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 function convertToCelsius() {
-    let fahrenheitInput = document.getElementById("fahrenheit").value;
+    let fahrenheitInput = document.querySelector("[data-fahrenheit]").value;
     
     if (fahrenheitInput) {
         let celsius = (fahrenheitInput - 32) * (5 / 9);
@@ -19,3 +19,19 @@ function convertToFahrenheit() {
         alert("Please enter a temperature in Celsius.");
     }
 }
+
+// function convertToCelsius(){
+//     let inputCelsius = document.querySelector('[data-celsius]').value;
+//     console.log('this is a value for celsius '+ inputCelsius);
+
+//     if(inputCelsius.value !==''){
+//         (inputCelsius.value  * 9/5) + 32;
+//         console.log(inputCelsius);
+//     }else{
+//         console.log('Yooo!');
+//     }
+
+// }
+
+let butn = document.getElementById('btnn');
+butn.addEventListener('click', convertToCelsius)
